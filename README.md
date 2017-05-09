@@ -25,10 +25,10 @@ Tested with: CDH 5.10 (Spark 1.6), Cloudera Kafka 2.1 (Apache 0.10), Kudu 1.2
 5. Run either the Scala, Java or Python Spark Streaming application (replace kafka brokers and kudu masters parameters):
 
     ```
-    spark-submit --class com.cloudera.fce.curtis.spark_stream_to_kudu.KafkaToKuduJava target/spark_stream_to_kudu-1.0-jar-with-dependencies.jar  ip-10-0-0-246.us-west-2.compute.internal:9092,ip-10-0-0-68.us-west-2.compute.internal:7051
+    spark-submit --class com.cloudera.fce.curtis.spark_stream_to_kudu.KafkaToKuduJava target/spark_stream_to_kudu-1.0-jar-with-dependencies.jar  ip-10-0-0-246.us-west-2.compute.internal:9092 ip-10-0-0-68.us-west-2.compute.internal:7051
     ```
     ```
-    spark-submit --class com.cloudera.fce.curtis.spark_stream_to_kudu.KafkaToKuduScala target/spark_stream_to_kudu-1.0-jar-with-dependencies.jar ip-10-0-0-246.us-west-2.compute.internal:9092,ip-10-0-0-68.us-west-2.compute.internal:7051
+    spark-submit --class com.cloudera.fce.curtis.spark_stream_to_kudu.KafkaToKuduScala target/spark_stream_to_kudu-1.0-jar-with-dependencies.jar ip-10-0-0-246.us-west-2.compute.internal:9092 ip-10-0-0-68.us-west-2.compute.internal:7051
     ```
     *PySpark:*  after building Scala/Java code in step 1, a kudu-spark_2...jar file should be available, typically under your *~/.m2* path
     ```
